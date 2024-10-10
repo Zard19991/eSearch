@@ -230,6 +230,7 @@ export interface setting {
             双击: "归位" | "关闭";
             提示: boolean;
         };
+        强制鼠标穿透: string;
     };
     代理: Electron.ProxyConfig;
     主页面: {
@@ -436,9 +437,11 @@ type MainWinType = {
 };
 
 type translateWinType = {
+    img: string;
     rect: { x: number; y: number; w: number; h: number };
     dipRect: { x: number; y: number; w: number; h: number };
     displayId: number;
+    type: "live" | "ding";
 };
 
 type myFetch = {
